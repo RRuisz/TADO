@@ -22,9 +22,22 @@ Route::get('/', function () {
 Route::get('/register', function() {
     return view('auth.register');
 })->name('register');
+
 Route::post('/register', [UserController::class, 'register']);
 
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
+
 Route::post('/login', [UserController::class, 'login']);
+
+Route::get('/logout', function() {
+    Auth::logout();
+    return to_route('login');
+})->name('logout');
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+
+})->middleware('auth')->name('dashboard');
