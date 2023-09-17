@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TADO (Team and Day Organizer) Projekt
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Projektumfang und Ziele
 
-## About Laravel
+**Projektumfang:**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Das TADO (Team and Day Organizer)-Projekt hat einen umfassenden Umfang und zielt darauf ab, eine umfangreiche Organisationsplattform zu schaffen, die Teams bei ihrer Arbeit unterstützt und individuellen Benutzern hilft, ihren Arbeitstag effizient zu planen. Im Kern beinhaltet der Projektumfang:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Kalenderfunktion**: Entwicklung eines Kalenders, der Benutzern ermöglicht, Meetings und Veranstaltungen zu planen. Dieser Kalender kann sowohl für individuelle als auch für Teamtermine verwendet werden.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Aufgabenmanagement**: Implementierung eines umfassenden Aufgabenmanagementsystems, das Benutzern erlaubt, Aufgaben für den Tag zu erstellen, Prioritäten festzulegen und den geschätzten Zeitaufwand anzugeben.
 
-## Learning Laravel
+- **Teamkollaboration**: Schaffung von Möglichkeiten zur Teamkollaboration, indem Aufgaben und Termine zwischen Teammitgliedern verteilt und gemeinsam bearbeitet werden können.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Prioritätsmanagement**: Automatische Prioritätserhöhung für offene Aufgaben vom Vortag, um sicherzustellen, dass wichtige Aufgaben im Fokus bleiben.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Projektziele:**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Die Hauptziele des TADO-Projekts sind:
 
-## Laravel Sponsors
+1. **Technische Umsetzung**: Die Entwicklung einer voll funktionsfähigen Anwendung, die Benutzern und Teams dabei hilft, ihren Arbeitstag effizient zu planen und zu organisieren.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. **Benutzerfreundlichkeit**: Die Schaffung eines benutzerfreundlichen Kalenders, der die Planung von Meetings und Ereignissen vereinfacht.
 
-### Premium Partners
+3. **Effektives Aufgabenmanagement**: Die Implementierung eines leistungsstarken Aufgabenmanagementsystems, das es Benutzern ermöglicht, ihre täglichen Aufgaben zu verwalten, Prioritäten festzulegen und Zeitpläne zu optimieren.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. **Teamkollaboration**: Die Förderung der Teamkollaboration durch die Möglichkeit, Aufgaben und Termine gemeinsam zu organisieren und zu bearbeiten.
 
-## Contributing
+5. **Automatisierte Prioritätssteigerung**: Die Bereitstellung einer intelligenten Funktion zur automatischen Prioritätserhöhung für offene Aufgaben, um sicherzustellen, dass wichtige Aufgaben nicht übersehen werden.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Projekt Techniken:**
 
-## Code of Conduct
+### Frontend:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Laravel Blade**: Verwendung von Laravel Blade für die Erstellung von Benutzeroberflächen und Ansichten.
+- **JavaScript**: Einbindung von JavaScript für die Implementierung interaktiver Funktionen.
+- **Bootstrap**: Nutzung von Bootstrap zur Gestaltung und Formatierung der Benutzeroberfläche.
 
-## Security Vulnerabilities
+### Backend:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Laravel / PHP**: Verwendung von Laravel und PHP für die Entwicklung der Serverlogik.
+- **MySQL**: Speicherung von Daten und Informationen in einer MySQL-Datenbank.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
