@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->boolean('status')->default(false);
             $table->integer('priority');
             $table->foreignId('team_id')->constrained();
-            $table->foreignId('user_id')->constrained()->nullable();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
