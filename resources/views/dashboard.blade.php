@@ -48,7 +48,7 @@
                         <div class="row mt-3">
                             <div class=" col-6">
                                 <label for="priority">Priorität</label>
-                                <select name="priority" class="form-select">
+                                <select name="priority" id="priority" class="form-select">
                                     <?php $i = 10 ?>
                                     @while($i > 0)
                                     <option value="{{$i}}">{{$i}}</option>
@@ -59,8 +59,8 @@
                             </div>
 
                             <div class=" col-6">
-                                <label for="priority">Team</label>
-                                <select name="team_id" class="form-select">
+                                <label for="teamselect">Team</label>
+                                <select name="team_id" id="teamselect" class="form-select">
                                     @foreach(Auth::user()->team as $team)
                                         <option value="{{$team->id}}" class="">{{$team->name}}</option>
                                     @endforeach
