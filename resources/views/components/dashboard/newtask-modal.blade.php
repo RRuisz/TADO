@@ -26,7 +26,7 @@
                         <div class=" col-6">
                             <label for="teamselect">Team</label>
                             <select name="team_id" id="teamselect" class="form-select">
-                                @foreach(Auth::user()->team as $team)
+                                @foreach(Auth::user()->teams as $team)
                                     <option value="{{$team->id}}" class="">{{$team->name}}</option>
                                 @endforeach
                                 <option value="">Kein Team auswählen</option>

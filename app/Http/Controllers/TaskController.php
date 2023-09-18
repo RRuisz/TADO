@@ -28,7 +28,7 @@ class TaskController extends Controller
         if ($request->team_id){
             $task->team_id = $request->team_id;
         }
-        $task->user_id = Auth::user()->id;
+        $task->created_by = Auth::user()->id;
         $task->save();
     }
 }

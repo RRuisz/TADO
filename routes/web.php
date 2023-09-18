@@ -44,3 +44,7 @@ Route::get('/dashboard', function () {
 })->middleware('auth')->name('dashboard');
 
 Route::post('/task/store', [TaskController::class, 'store'])->name('task.store');
+Route::get('/team/new', function () {
+    return view('auth.newteam');
+})->name('newteam');
+Route::post('/team/new', [TeamController::class, 'saveteam']);

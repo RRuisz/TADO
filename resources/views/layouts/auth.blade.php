@@ -24,6 +24,9 @@
             @if(Route::currentRouteName() == 'teamselect')
                 <h2 class="text-center">Teamauswahl</h2>
             @endif
+            @if(Route::currentRouteName() == 'newteam')
+                <h2 class="text-center">Neues Team anlegen</h2>
+            @endif
         </div>
         <div class="card-body">
             @yield('content')
