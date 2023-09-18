@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('tasks', function (Blueprint $table) {
-            $table->foreignId('team_id')->nullable()->change();
+        Schema::table('Tasks', function (Blueprint $table) {
+            $table->foreignId('done_by')->nullable()->constrained('users');
 
         });
     }
