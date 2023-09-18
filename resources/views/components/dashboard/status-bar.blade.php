@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class=" container-fluid  d-flex justify-content-between me-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class=" container-fluid  d-flex justify-content-between me-5 ">
         <a class="navbar-brand ms-5" href="{{ route('dashboard') }}">T a D o </a>
 
         <div class="d-flex justify-content-around">

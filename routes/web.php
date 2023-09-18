@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{TeamController, UserController};
+use App\Http\Controllers\{TaskController, TeamController, UserController};
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,6 @@ Route::get('/teamselect', [TeamController::class, 'teamselect'])->name('teamsele
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-
 })->middleware('auth')->name('dashboard');
+
+Route::post('/task/store', [TaskController::class, 'store'])->name('task.store');
