@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UserController};
+use App\Http\Controllers\{TeamController, UserController};
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +36,7 @@ Route::get('/logout', function() {
     return to_route('login');
 })->name('logout');
 
+Route::get('/teamselect', [TeamController::class, 'teamselect'])->name('teamselect')->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

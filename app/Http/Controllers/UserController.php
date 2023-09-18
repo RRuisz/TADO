@@ -55,7 +55,7 @@ class UserController extends Controller
             if (Hash::check($request->password, $user->password)){
 
                 Auth::login($user);
-                return to_route('dashboard');
+                return to_route('teamselect');
 
             } else {
                 return back()->withErrors($error);

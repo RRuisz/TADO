@@ -21,6 +21,9 @@
             @if(Route::currentRouteName() == 'register')
                 <h2 class="text-center">Konto erstellen</h2>
             @endif
+            @if(Route::currentRouteName() == 'teamselect')
+                <h2 class="text-center">Teamauswahl</h2>
+            @endif
         </div>
         <div class="card-body">
             @yield('content')
