@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TADO | @yield('title')</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+        .height-80vh{
+            height: 80vh;
+        }
+    </style>
 </head>
 <body>
 

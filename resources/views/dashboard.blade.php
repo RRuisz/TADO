@@ -6,27 +6,16 @@
 
     <x-dashboard.status-bar />
 
-        <div class="container mt-5 bg-secondary rounded">
+        <div class="container mt-5 bg-secondary rounded height-80vh" >
             <div class="row">
-                <div class="col-2">
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
-                    <div class="p-3">hallo</div>
+                <div class="col-2 border-end border-black height-80vh">
+                    <button class=" btn btn-secondary col-12 mt-2 navbtn" data-route="index">Übersicht</button>
+                    <button class="btn btn-secondary col-12 mt-2 navbtn" data-route="tasks">Aufgaben Übersicht</button>
+                    <button class="btn btn-secondary col-12 mt-2 navbtn" data-route="team">Team Übersicht</button>
+
                 </div>
-                <div class="col-8 d-flex flex-column">
-                    <div class="row">
-                        <div class="col-4">Taskausgabe</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">Übersicht</div>
-                        <div class="col-3">servus</div>
-                    </div>
+                <div class="col-10  height-80vh" id="dashboard">
+
                 </div>
             </div>
         </div>
@@ -42,6 +31,7 @@
 
 @section('script')
     <script>
+
 
         function checkTime(i) {
             if (i < 10) {
@@ -61,10 +51,44 @@
             document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
             t = setTimeout(function () {
                 startTime()
-            }, 750);
+            }, 1000);
         }
 
         startTime();
 
+
+
+        const btns = document.querySelectorAll('.navbtn');
+        const dashboard = document.getElementById('dashboard')
+
+        btns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                btns.forEach(function (otherBtn) {
+                    if (otherBtn !== btn) {
+                        otherBtn.disabled = false;
+                    }
+                });
+                const route = this.getAttribute('data-route')
+                const url = '/dashboard/' + route ;
+
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        dashboard.innerHTML = data
+                        this.disabled = true;
+                    })
+            })
+        })
+        window.addEventListener('load', function() {
+            const url = '/dashboard/index';
+
+
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    dashboard.innerHTML = data;
+                })
+
+        });
     </script>
 @endsection

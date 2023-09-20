@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\inviteMail;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,15 +23,19 @@ class TeamController extends Controller
 
     public function saveteam(Request $request)
     {
-//        dd($request);
+
         $team = new Team;
         $team->name = $request->name;
         $team->save();
 
         Auth::user()->teams()->attach($team->id);
 
-        $invmail = new inviteMail($team, Auth::user()->username);
-        Mail::to($request->invmail)->send($invmail);
+        return to_route('dashboard');
+    }
+
+    public function setTeam($id)
+    {
+        session(['teamid' => $id]);
 
         return to_route('dashboard');
     }

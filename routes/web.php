@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{TaskController, TeamController, UserController};
+use App\Http\Controllers\{DashboardController, TaskController, TeamController, UserController};
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,12 @@ use App\Http\Controllers\{TaskController, TeamController, UserController};
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(!Auth::user()){
+        return to_route('login');
+    }else {
+        return to_route('dashboard');
+    }
+
 });
 
 
@@ -48,3 +53,10 @@ Route::get('/team/new', function () {
     return view('auth.newteam');
 })->name('newteam');
 Route::post('/team/new', [TeamController::class, 'saveteam']);
+
+//Dashboard
+Route::get('/dashboard/index', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('/dashboard/settings', [DashboardController::class, 'settings'])->name('dashboard.settings');
+Route::get('/dashboard/team', [DashboardController::class, 'team'])->name('dashboard.team');
+Route::get('/dashboard/tasks', [DashboardController::class, 'taskoverview'])->name('dashboard.taskoverview');
+Route::get('dashboard/team/{id}', [TeamController::class, 'setTeam']);
