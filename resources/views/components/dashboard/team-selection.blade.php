@@ -1,6 +1,6 @@
 <div class="list-group">
     @foreach(Auth::user()->teams as $team)
-    <a href="/dashboard/team/{{$team->id }}" class="list-group-item list-group-item-action   text-center p-3" aria-current="true">
+    <a href="{{route('dashboard.team', ['id' => $team->id])}}" class="list-group-item list-group-item-action   text-center p-3" aria-current="true">
     {{$team->name}}
     </a>
     @endforeach

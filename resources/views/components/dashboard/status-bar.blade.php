@@ -12,7 +12,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             @foreach(Auth::user()->teams as $team)
-                                <li><a class="dropdown-item" href="#">{{$team->name}}</a></li>
+                                <li><a class="dropdown-item" href="{{route('dashboard.setTeam', ['id' => $team->id])}}">{{$team->name}}</a></li>
                             @endforeach
                             <li><a class="dropdown-item" href="{{route('newteam')}}">Neues Team anlegen</a></li>
                         </ul>

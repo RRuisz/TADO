@@ -59,4 +59,4 @@ Route::get('/dashboard/index', [DashboardController::class, 'index'])->name('das
 Route::get('/dashboard/settings', [DashboardController::class, 'settings'])->name('dashboard.settings');
 Route::get('/dashboard/team', [DashboardController::class, 'team'])->name('dashboard.team');
 Route::get('/dashboard/tasks', [DashboardController::class, 'taskoverview'])->name('dashboard.taskoverview');
-Route::get('dashboard/team/{id}', [TeamController::class, 'setTeam']);
+Route::get('/dashboard/team/{id}', [TeamController::class, 'setTeam'])->name('dashboard.setTeam');
